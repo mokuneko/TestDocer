@@ -4,7 +4,7 @@ import speech_recognition as sr
 from moviepy.editor import VideoFileClip
 
 ############################## 
-#1 ファイル選択ダイアログの表示 
+#1 ファイル選択ダイアログの表示    '''Dockerでは利用できない
 ##############################
 def getOpenFile():
     root = tkinter.Tk()
@@ -17,7 +17,6 @@ def getOpenFile():
         title="処理ファイルを選択してください",
         initialdir =iDir
     )
-    
     return file
 
 ################################################################## 
@@ -118,5 +117,6 @@ def generate_srt_file(talking_periods, output_file_path):
 ###############
 # main
 ##############
-fileName = getOpenFile()
+#fileName = getOpenFile()
+fileName = "TestSample.mp4"
 GoogleSpeechGetTextTime(fileName)
